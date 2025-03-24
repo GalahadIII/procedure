@@ -80,7 +80,9 @@ sudo apt install -y mysql-server
 > ```bash
 > sudo mysql
 > ```
-> Exécutez ensuite la commande ALTER USER suivante pour changer la méthode d'authentification de l'utilisateur root en une méthode utilisant un mot de passe. L'exemple suivant modifie la méthode d'authentification en mysql_native_password **(Ne pas oublier de changer le mot de passe)**:
+> Exécutez ensuite la commande ALTER USER suivante pour changer la méthode d'authentification de l'utilisateur root en une méthode utilisant un mot de passe. L'exemple suivant modifie la méthode d'authentification en mysql_native_password 
+>
+> **(Ne pas oublier de changer le mot de passe)**:
 > ```bash
 > ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mot_de_passe';
 > ```
