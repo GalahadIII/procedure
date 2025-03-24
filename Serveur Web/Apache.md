@@ -140,3 +140,30 @@ sudo mysql_secure_installation
    > *Reload privilege tables now?*  
    > **(Press y|Y for Yes, any other key for No):** `Yes`
 ---
+
+Quand terminé vérifier si vous pouvez vous connecter a la console MySQL avec le mot de passe décidé plus tot.
+```bash
+sudo mysql -u root -p
+```
+
+**Output:**
+```
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.28-0ubuntu4 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+```
+
+pour quitter la console mysql
+```
+mysql> exit
+```
