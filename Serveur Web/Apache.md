@@ -56,12 +56,12 @@ Pour vérifier si tout fonctionne comme prévu vous pouvez tenter d'accéder à 
 Si tout est bon vous devriez voir cette page :
 ![Apache2 Default Page](apache-default-page.png)
 
-### Trouver l'adresse ip de votre serveur
-Pour commencer, l'adresse ip est très probablement la même que vous avez utilisé pour vous connecter en ssh, si vous ne la connaissez pas vous pouver
-
-```bash
-curl https://ipecho.net/plain ; echo
-```
+> [!NOTE]
+> ### Trouver l'adresse ip de votre serveur
+> Pour commencer, l'adresse ip est très probablement la même que vous avez utilisé pour vous connecter en ssh, si vous ne la connaissez pas vous pouvez faire la commande :
+> ```bash
+> curl https://ipecho.net/plain ; echo
+> ```
 
 ## Installer MySQL
 
