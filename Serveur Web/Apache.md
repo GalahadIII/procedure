@@ -95,7 +95,8 @@ Vous pouvez maintenant lance le script `mysql_secure_installation`
 sudo mysql_secure_installation
 ```
 
-> [!NOTE]Activer la fonctionnalité `VALIDATE PASSWORD PLUGIN` est une question de jugement. Si elle est activée, les mots de passe qui ne correspondent pas aux critères spécifiés seront rejetés par MySQL avec une erreur. Il est sans danger de laisser la validation désactivée, mais vous devriez toujours utiliser des mots de passe forts et uniques pour les identifiants de la base de données.
+> [!NOTE]
+> Activer la fonctionnalité `VALIDATE PASSWORD PLUGIN` est une question de jugement. Si elle est activée, les mots de passe qui ne correspondent pas aux critères spécifiés seront rejetés par MySQL avec une erreur. Il est sans danger de laisser la validation désactivée, mais vous devriez toujours utiliser des mots de passe forts et uniques pour les identifiants de la base de données.
 
 ### Questions de `mysql_secure_installation`
 
