@@ -125,20 +125,16 @@ sudo mysql_secure_installation
 
 5. **Supprimer les utilisateurs anonymes**  
    > *Remove anonymous users?*  
-   > **(Press y|Y for Yes, any other key for No):**
-   > `Yes`
+   > **(Press y|Y for Yes, any other key for No):** `Yes`
 
 6. **Interdire les connexions root à distance**  
    > *Disallow root login remotely?*  
-   > **(Press y|Y for Yes, any other key for No):**
-   > `Yes`  
+   > **(Press y|Y for Yes, any other key for No):** `Yes`  
 
 7. **Supprimer la base de données `test`**  
    > *Remove test database and access to it?*  
-   > **(Press y|Y for Yes, any other key for No):**  
-   > `Yes`
+   > **(Press y|Y for Yes, any other key for No):** `Yes`
 8. **Recharger les privilèges**  
    > *Reload privilege tables now?*  
-   > **(Press y|Y for Yes, any other key for No):**  
-   > `Yes`
+   > **(Press y|Y for Yes, any other key for No):** `Yes`
 ---
