@@ -56,7 +56,7 @@ Pour vérifier si tout fonctionne comme prévu vous pouvez tenter d'accéder à 
 Si tout est bon vous devriez voir cette page :
 ![Apache2 Default Page](apache-default-page.png)
 
-> [!NOTE]
+> [!TIP]
 > ### Trouver l'adresse ip de votre serveur
 > Pour commencer, l'adresse ip est très probablement la même que vous avez utilisé pour vous connecter en ssh, si vous ne la connaissez pas vous pouvez faire la commande :
 > ```bash
@@ -70,7 +70,7 @@ on utilise apt pour installer le logicielle
 sudo apt install -y mysql-server
 ```
 
-> [!CAUTION]
+> [!WARNING]
 > Depuis juillet 2022, une erreur se produira lorsque vous exécuterez le script mysql_secure_installation sans configuration supplémentaire. La raison est que ce script tente de définir un mot de passe pour le compte root de MySQL, mais par défaut sur les installations Ubuntu, ce compte n'est pas configuré pour se connecter en utilisant un mot de passe.
 >
 > pour éviter tout problème, vous devez d'abord ajuster la méthode d'authentification de l'utilisateur root de MySQL.
@@ -89,3 +89,55 @@ sudo apt install -y mysql-server
 > exit
 > ```
 
+Vous pouvez maintenant lance le script `mysql_secure_installation`
+
+```bash
+sudo mysql_secure_installation
+```
+
+> [!NOTE]Activer la fonctionnalité `VALIDATE PASSWORD PLUGIN` est une question de jugement. Si elle est activée, les mots de passe qui ne correspondent pas aux critères spécifiés seront rejetés par MySQL avec une erreur. Il est sans danger de laisser la validation désactivée, mais vous devriez toujours utiliser des mots de passe forts et uniques pour les identifiants de la base de données.
+
+### Questions de `mysql_secure_installation`
+
+1. **VALIDATE PASSWORD PLUGIN**  
+   > *Would you like to setup VALIDATE PASSWORD plugin?*  
+   > **(Press y|Y for Yes, any other key for No):**  
+
+2. **Choix du niveau de sécurité du mot de passe** *(si le plugin VALIDATE PASSWORD est activé)*  
+   > There are three levels of password validation policy:  
+   > - **LOW**    Length >= 8  
+   > - **MEDIUM** Length >= 8, numeric, mixed case, and special characters  
+   > - **STRONG** Length >= 8, numeric, mixed case, special characters and dictionary file  
+   >   
+   > **Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG:**  
+
+3. **Définir le mot de passe root** *(si le plugin VALIDATE PASSWORD est activé)*  
+   > *Please set the password for root here.*  
+   >   
+   > **New password:**  
+   > **Re-enter new password:**  
+
+4. **Confirmer la force du mot de passe** *(si le plugin VALIDATE PASSWORD est activé)*  
+   > *Estimated strength of the password: X*  
+   >   
+   > **Do you wish to continue with the password provided? (Press y|Y for Yes, any other key for No):**  
+
+5. **Supprimer les utilisateurs anonymes**  
+   > *Remove anonymous users?*  
+   > **(Press y|Y for Yes, any other key for No):**
+   > `Yes`
+
+6. **Interdire les connexions root à distance**  
+   > *Disallow root login remotely?*  
+   > **(Press y|Y for Yes, any other key for No):**
+   > `Yes`  
+
+7. **Supprimer la base de données `test`**  
+   > *Remove test database and access to it?*  
+   > **(Press y|Y for Yes, any other key for No):**  
+   > `Yes`
+8. **Recharger les privilèges**  
+   > *Reload privilege tables now?*  
+   > **(Press y|Y for Yes, any other key for No):**  
+   > `Yes`
+---
